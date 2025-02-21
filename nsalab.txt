@@ -1,0 +1,82 @@
+developer@ccfl6-pc34:~$ mkdir rishi32
+developer@ccfl6-pc34:~$ cd rishi 32
+bash: cd: too many arguments
+developer@ccfl6-pc34:~$ cd rishi32
+developer@ccfl6-pc34:~/rishi32$ touch f1 f2 f3 f4
+developer@ccfl6-pc34:~/rishi32$ cat>f1
+hello world
+watermelon water 
+^C
+developer@ccfl6-pc34:~/rishi32$ cat>>f1
+grapes apple
+^C
+developer@ccfl6-pc34:~/rishi32$ cat>>f1
+water water
+^C
+developer@ccfl6-pc34:~/rishi32$ cat>>f1
+strawberry strawberry
+^C
+developer@ccfl6-pc34:~/rishi32$ cat>f2
+hello world
+^C
+developer@ccfl6-pc34:~/rishi32$ head f1
+hello world
+watermelon water 
+grapes apple
+water water
+strawberry strawberry
+developer@ccfl6-pc34:~/rishi32$ head -n 3 f1
+hello world
+watermelon water 
+grapes apple
+developer@ccfl6-pc34:~/rishi32$ ls
+f1  f2  f3  f4
+developer@ccfl6-pc34:~/rishi32$ ls -l>file1
+developer@ccfl6-pc34:~/rishi32$ cat file1
+total 8
+-rw-r--r-- 1 developer developer 77 Feb 21 12:23 f1
+-rw-r--r-- 1 developer developer 12 Feb 21 12:24 f2
+-rw-r--r-- 1 developer developer  0 Feb 21 12:22 f3
+-rw-r--r-- 1 developer developer  0 Feb 21 12:22 f4
+-rw-r--r-- 1 developer developer  0 Feb 21 12:24 file1
+developer@ccfl6-pc34:~/rishi32$ ls -lS>file1
+developer@ccfl6-pc34:~/rishi32$ cat file1
+total 8
+-rw-r--r-- 1 developer developer 77 Feb 21 12:23 f1
+-rw-r--r-- 1 developer developer 12 Feb 21 12:24 f2
+-rw-r--r-- 1 developer developer  0 Feb 21 12:22 f3
+-rw-r--r-- 1 developer developer  0 Feb 21 12:22 f4
+-rw-r--r-- 1 developer developer  0 Feb 21 12:25 file1
+developer@ccfl6-pc34:~/rishi32$ cat>f4
+helooooooo
+^C
+developer@ccfl6-pc34:~/rishi32$ ^C
+developer@ccfl6-pc34:~/rishi32$ cat>>f4
+pumpkin
+^C
+developer@ccfl6-pc34:~/rishi32$ ls -lS>file1
+developer@ccfl6-pc34:~/rishi32$ cat file1
+total 12
+-rw-r--r-- 1 developer developer 77 Feb 21 12:23 f1
+-rw-r--r-- 1 developer developer 19 Feb 21 12:26 f4
+-rw-r--r-- 1 developer developer 12 Feb 21 12:24 f2
+-rw-r--r-- 1 developer developer  0 Feb 21 12:22 f3
+-rw-r--r-- 1 developer developer  0 Feb 21 12:26 file1
+developer@ccfl6-pc34:~/rishi32$ ls -l|head -n 5
+total 16
+-rw-r--r-- 1 developer developer  77 Feb 21 12:23 f1
+-rw-r--r-- 1 developer developer  12 Feb 21 12:24 f2
+-rw-r--r-- 1 developer developer   0 Feb 21 12:22 f3
+-rw-r--r-- 1 developer developer  19 Feb 21 12:26 f4
+developer@ccfl6-pc34:~/rishi32$ ls -l|head -n 3
+total 16
+-rw-r--r-- 1 developer developer  77 Feb 21 12:23 f1
+-rw-r--r-- 1 developer developer  12 Feb 21 12:24 f2
+developer@ccfl6-pc34:~/rishi32$ ls -lS|head -n 4
+total 16
+-rw-r--r-- 1 developer developer 272 Feb 21 12:26 file1
+-rw-r--r-- 1 developer developer  77 Feb 21 12:23 f1
+-rw-r--r-- 1 developer developer  19 Feb 21 12:26 f4
+developer@ccfl6-pc34:~/rishi32$ 
+
+
