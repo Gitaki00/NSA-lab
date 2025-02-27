@@ -68,5 +68,95 @@ total 16
 -rw-r--r-- 1 developer developer  77 Feb 21 12:23 f1
 -rw-r--r-- 1 developer developer  19 Feb 21 12:26 f4
 developer@ccfl6-pc34:~/rishi32$ 
+-------------------------------------------------------
+developer@ccfl6-pc34:~$ wc -l a1.txt
+7 a1.txt
+developer@ccfl6-pc34:~$ wc -w a1.txt
+16 a1.txt
+developer@ccfl6-pc34:~$ wc -m a1.txt
+108 a1.txt
+developer@ccfl6-pc34:~$ wc -L a1.txt
+23 a1.txt
+developer@ccfl6-pc34:~$ cat a1.txt
+hy
+hello
+watermelon watermelon 
+pappaya pappaya
+chiku chiku chiku
+chiku chiku chiku
+fruit salad fruit salad
+developer@ccfl6-pc34:~$ 
+---------------------------------------------------------
+eveloper@ccfl6-pc34:~$ echo "hello world"
+hello world
+developer@ccfl6-pc34:~$ echo "hello world"|wc
+      1       2      12
+developer@ccfl6-pc34:~$ echo "hello world"|wc -l
+1
+developer@ccfl6-pc34:~$ echo "hello world"|wc -m
+12
+developer@ccfl6-pc34:~$ cat a1.txt
+hy
+hello
+watermelon watermelon 
+pappaya pappaya
+chiku chiku chiku
+chiku chiku chiku
+fruit salad fruit salad
+developer@ccfl6-pc34:~$ cut -c1-5 a1.txt
+hy
+hello
+water
+pappa
+chiku
+chiku
+fruit
+developer@ccfl6-pc34:~$ 
+----------------------------------------------------
+developer@ccfl6-pc34:~$ nano a2.csv
+developer@ccfl6-pc34:~$ cut -d',' -f2 a2.csv
+1
+2
+3
+4
+5
+6
+developer@ccfl6-pc34:~$ cat a2.csv
+a,1,11
+b,2,20
+c,3,12
+d,4,15
+e,5,17
+f,6,19
+developer@ccfl6-pc34:~$ 
+-----------------------------------------------------
+developer@ccfl6-pc34:~$ nano a
+developer@ccfl6-pc34:~$ cat a
+a
+b
+c
+d
+developer@ccfl6-pc34:~$ nano b
+developer@ccfl6-pc34:~$ cat b
+1
+2
+3
+4
+developer@ccfl6-pc34:~$ nano c
+developer@ccfl6-pc34:~$ cat c
+x
+y
+z
+developer@ccfl6-pc34:~$ paste a b
+a	1
+b	2
+c	3
+d	4
+developer@ccfl6-pc34:~$ paste b c
+1	x
+2	y
+3	z
+4	
+
 
 
