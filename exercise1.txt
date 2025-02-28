@@ -1,0 +1,76 @@
+developera2@ccfl9-pc1:~$ cd reshmi_32
+developera2@ccfl9-pc1:~/reshmi_32$ mkdir -p Project34/Payroll Project34/Sales
+developera2@ccfl9-pc1:~/reshmi_32$ cd Project34/Payroll
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ touch Checks.dat Pay2.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ nano Checks.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ nano Pay2.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ cd Sales
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales$ mkdir RegionA RegionB
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales$ cd RegionA
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionA$ touch East.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionA$ nano East.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionA$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales$ cd RegionB
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionB$ touch West1.dat West2.dat West3.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionB$ nano West1.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionB$ nano West2.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionB$ nano West3.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionB$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ cp pay2.dat ../Sales/RegionA/ ../Sales/RegionB/
+cp: cannot stat 'pay2.dat': No such file or directory
+cp: -r not specified; omitting directory '../Sales/RegionA/'
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ cp Pay2.dat ../Sales/RegionA/ ../Sales/RegionB/
+cp: -r not specified; omitting directory '../Sales/RegionA/'
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ cp Pay2.dat ../Sales/RegionA/
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ cd ../Sales/RegionB
+bash: cd: ../Sales/RegionB: No such file or directory
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ cd Sales
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales$ cd RegionB
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionB$ cd..
+bash: cd..: command not found
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionB$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ cd ../Sales/RegionB
+bash: cd: ../Sales/RegionB: No such file or directory
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ cd Sales/RegionB
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionB$ cp west3.dat ../RegionA/East1.dat
+cp: cannot stat 'west3.dat': No such file or directory
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionB$ cp West3.dat ../RegionA/East1.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales/RegionB$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Sales$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ cd Payroll
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ cat Checks.dat ../Sales/RegionA/Pay2.dat > Payment.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ find Sales -type f | wc -l
+7
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ find . -name "*.dat"
+./Sales/RegionB/Pay2.dat
+./Sales/RegionB/West3.dat
+./Sales/RegionB/West1.dat
+./Sales/RegionB/West2.dat
+./Sales/RegionA/Pay2.dat
+./Sales/RegionA/East.dat
+./Sales/RegionA/East1.dat
+./Payroll/Pay2.dat
+./Payroll/Payment.dat
+./Payroll/Checks.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ cd Payroll/Pay2.dat
+bash: cd: Payroll/Pay2.dat: Not a directory
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ cd Payroll
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ nano Pay2.dat
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ sort -k2,2nr pay2.dat
+sort: cannot read: pay2.dat: No such file or directory
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ sort -k2,2nr Pay2.dat
+Name2 1500
+Name3 1200
+Name1 1000
+developera2@ccfl9-pc1:~/reshmi_32/Project34/Payroll$ cd ..
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ ls Sales | tr '[:lower:]' '[:upper:]'
+REGIONA
+REGIONB
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ rm -r Sales/RegionB
+developera2@ccfl9-pc1:~/reshmi_32/Project34$ 
+
