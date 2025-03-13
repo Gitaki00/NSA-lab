@@ -1,0 +1,21 @@
+(1).Sort an employee file containing employee name , salary ,designation in
+the descending order of salary.
+developer@ccfl6-pc34:~/reshmi32$ nano employees.csv
+developer@ccfl6-pc34:~/reshmi32$ sort -t, -k2,2nr employees.csv
+David,80000,Director
+Eve,75000,Developer
+Alice,70000,Manager
+Charlie,60000,Designer
+Bob,50000,Developer
+
+Name,Salary,Designation
+developer@ccfl6-pc34:~/reshmi32$ sort -t, -k2,2nr employees.csv > sorted_employees.csv
+developer@ccfl6-pc34:~/reshmi32$ cat sorted_employees.csv
+David,80000,Director
+Eve,75000,Developer
+Alice,70000,Manager
+Charlie,60000,Designer
+Bob,50000,Developer
+
+Name,Salary,Designation
+developer@ccfl6-pc34:~/reshmi32$ 
