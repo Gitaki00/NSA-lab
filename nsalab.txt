@@ -253,7 +253,9 @@ watermelon34
 Hellooooo
 4567
 8076054329
-developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ 
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -c file1.txt
+sort: file1.txt:3: disorder: 32
+ 
 
 
 
