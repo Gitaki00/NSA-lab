@@ -157,6 +157,104 @@ developer@ccfl6-pc34:~$ paste b c
 2	y
 3	z
 4	
+------------------------------------------------------------
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ touch file1.txt
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ nano file1.txt
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort file1.txt
+001
+32
+4567
+8076054329
+BY
+GOOD BYE
+hello
+Hellooooo
+reshmi
+watermelon34
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -n file1.txt
+BY
+GOOD BYE
+hello
+Hellooooo
+reshmi
+watermelon34
+001
+32
+4567
+8076054329
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -r file1.txt
+watermelon34
+reshmi
+Hellooooo
+hello
+GOOD BYE
+BY
+8076054329
+4567
+32
+001
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -k file1.txt
+sort: invalid number at field start: invalid count at start of ‘file1.txt’
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -k2 file1.txt
+001
+32
+4567
+8076054329
+BY
+hello
+Hellooooo
+reshmi
+watermelon34
+GOOD BYE
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -t file1.txt
+sort: multi-character tab ‘file1.txt’
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -t2 file1.txt
+001
+32
+4567
+8076054329
+BY
+GOOD BYE
+hello
+Hellooooo
+reshmi
+watermelon34
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -u file1.txt
+001
+32
+4567
+8076054329
+BY
+GOOD BYE
+hello
+Hellooooo
+reshmi
+watermelon34
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -f file1.txt
+001
+32
+4567
+8076054329
+BY
+GOOD BYE
+hello
+Hellooooo
+reshmi
+watermelon34
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -o2 file1.txt
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ sort -m file1.txt
+hello
+reshmi
+32
+001
+BY
+GOOD BYE
+watermelon34
+Hellooooo
+4567
+8076054329
+developer@ccfl6-pc34:~/Documents/reshmi32_nsa$ 
+
 
 
 
