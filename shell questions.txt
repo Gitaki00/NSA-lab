@@ -1,0 +1,135 @@
+(1)
+Write a shell script to find the sum, the average and the product of the four
+integers entered.
+
+echo "Enter four integers:"
+read num1 num2 num3 num4
+
+sum=$((num1 + num2 + num3 + num4))
+average=$(echo "scale=2; $sum / 4" | bc)
+product=$((num1 * num2 * num3 * num4))
+
+echo "Sum: $sum"
+echo "Average: $average"
+echo "Product: $product"
+
+(2)
+a) Write a program to check whether a number entered is odd or even.
+b) Write a shell script to print given number in reverse order
+c) Write a shell script to print sum of all digits of a given number
+
+read -p "Enter an integer: " number
+
+#number is odd or even
+if (( number % 2 == 0 )); then
+    echo "$number is even."
+else
+    echo "$number is odd."
+fi
+
+#number in reverse order
+original_number=$number
+reverse=0
+while [ $number -gt 0 ]; do
+    reverse=$((reverse * 10 + number % 10))
+    number=$((number / 10))
+done
+echo "Reversed number: $reverse"
+
+#sum of digits
+number=$original_number
+sum=0
+while [ $number -gt 0 ]; do
+    sum=$((sum + number % 10))
+    number=$((number / 10))
+done
+echo "Sum of digits: $sum"
+
+(3)
+Write a shell script that accepts any year from the keyboard and determine
+whether the year is a leap year or not.
+
+read -p "Enter a year: " year
+
+if (( (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) )); then
+    echo "$year is a leap year."
+else
+    echo "$year is not a leap year."
+fi
+
+(4)
+Write a shell script to find the factorial of a number
+
+echo "Enter a number:"
+read number
+
+factorial=1
+counter=$number
+
+while [ $counter -gt 0 ]
+do
+  factorial=$((factorial * counter))
+  counter=$((counter - 1))
+done
+
+echo "The factorial of $number is $factorial"
+
+(5)
+Write a program to print prime numbers from 1 to 100
+
+for ((n=2; n<=100; n++))
+do
+  flag=0
+
+  for ((i=2; i<n; i++))
+  do
+    if (( n % i == 0 ))
+    then
+      flag=1
+      break
+    fi
+  done
+  
+  if (( flag == 0 ))
+  then
+    echo -n "$n  "
+  fi
+done
+
+(6)
+Write a script for printing Numbers in ascending order
+start=1
+end=100
+
+for ((i=start; i<=end; i++)); do
+    echo -n "$i "
+done
+echo
+
+(7)
+Write a shell script which displays a list of files in the current directory to
+which we have read, write and execute permissions.
+
+(8)
+Write a shell script to find the number of occurrences of a particular digit in a
+given number.
+
+(9)
+Write shell script to print alternate digits when a 7 digit number is passed as
+input. (Eg: Input: 1234567,Ans: 1,3,5,7)
+
+(10)
+Write a shell script that takes a command line argument and displays the
+details depending on whether the argument is a directory, a file, or something
+else.
+
+(11)
+Write a shell script that accepts a filename, starting line number and ending
+line number as arguments and displays all the lines between the given line
+numbers.
+
+(12)
+Write a shell script that deletes all lines containing a specified word in one or
+more files supplied as arguments to it.
+
+
